@@ -6,11 +6,11 @@ const KEYBOARD_ACTIONS = {
   KeyS: 'down',
   KeyA: 'left',
   Space: 'jump',
-  Digit1: 'wood',
-  Digit2: 'dirt',
-  Digit3: 'glass',
+  Digit1: 'dirt',
+  Digit2: 'glass',
+  Digit3: 'grass',
   Digit4: 'log',
-  Digit5: 'grass'
+  Digit5: 'wood'
 }
 
 export const useKeyboard = () => {
@@ -23,8 +23,8 @@ export const useKeyboard = () => {
     dirt: false,
     glass: false,
     grass: false,
-    wood: false,
-    log: false
+    log: false,
+    wood: false
   })
 
   useEffect(() => {
