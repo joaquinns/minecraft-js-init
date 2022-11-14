@@ -6,7 +6,10 @@ import * as textures from '../images/textures'
 
 export const Cube = ({ id, position, texture }) => {
   const [isHovered, setIsHovered] = useState(false)
-  const [removeCube] = useStore((state) => [state.removeCube])
+  const [addCube, removeCube] = useStore((state) => [
+    state.addCube,
+    state.removeCube
+  ])
 
   const [ref] = useBox(() => ({
     type: 'Static',
@@ -28,9 +31,28 @@ export const Cube = ({ id, position, texture }) => {
       ref={ref}
       onClick={(e) => {
         e.stopPropagation()
-
+        const cubeFace = Math.floor(e.faceIndex / 2)
+        const { x, y, z } = ref.current.position
         if (e.altKey) {
-          removeCube(id)
+          return removeCube(id)
+        }
+        if (cubeFace === 0) {
+          addCube(x + 1, y, z)
+        }
+        if (cubeFace === 1) {
+          addCube(x - 1, y, z)
+        }
+        if (cubeFace === 2) {
+          addCube(x, y + 1, z)
+        }
+        if (cubeFace === 3) {
+          addCube(x, y - 1, z)
+        }
+        if (cubeFace === 4) {
+          addCube(x, y, z + 1)
+        }
+        if (cubeFace === 5) {
+          addCube(x - 1, y, z - 1)
         }
       }}
     >
