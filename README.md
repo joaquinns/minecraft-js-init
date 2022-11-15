@@ -3,7 +3,7 @@
 ![Screenshoot](https://raw.githubusercontent.com/joaquinns/minecraft-js-init/master/minecraftjs.PNG)
 
 [See the app](https://minecraft-js-init.vercel.app/)
-# Getting Started with Password Generator with js
+# Getting Started with Minecraft-js
 
 ## Available Scripts
 
