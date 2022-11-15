@@ -52,3 +52,16 @@ body {
 .texture-selector img.selected {
   border: 3px solid whitesmoke;
 }
+
+.menu-ui {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  display: flex;
+}
+
+.button-ui {
+  color: black;
+  font-weight: bolder;
+  padding: 0.5rem 1rem;
+}
