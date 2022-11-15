@@ -6,6 +6,7 @@ import { FCV as Fcv } from './components/FCV'
 import { Player } from './components/Player'
 import { Cubes } from './components/Cubes'
 import { TextureSelector } from './components/TextureSelector'
+import { MenuUI } from './components/MenuUI'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Ground />
         </Physics>
       </Canvas>
+      <MenuUI />
       <TextureSelector />
     </>
   )
